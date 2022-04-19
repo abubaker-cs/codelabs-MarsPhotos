@@ -49,7 +49,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
+        // >>> To use the built-in features, you need the following code
         jvmTarget = '1.8'
     }
 }
@@ -72,4 +74,7 @@ dependencies {
     // Retrofit with Moshi Converter
     // This converter enables Retrofit to return the JSON result as a "String".
     implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+
+    // Retrofit with Moshi Converter
+    // implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
 }
