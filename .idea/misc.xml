@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/moham/AndroidStudioProjects/Codelabs/MarsPhotos/app/src/main/res/drawable/ic_broken_image.xml" value="0.163" />
         <entry key="..\:/Users/moham/AndroidStudioProjects/Codelabs/MarsPhotos/app/src/main/res/layout/activity_main.xml" value="0.3140625" />
         <entry key="..\:/Users/moham/AndroidStudioProjects/Codelabs/MarsPhotos/app/src/main/res/layout/fragment_overview.xml" value="0.3140625" />
         <entry key="..\:/Users/moham/AndroidStudioProjects/Codelabs/MarsPhotos/app/src/main/res/layout/grid_view_item.xml" value="0.3140625" />
