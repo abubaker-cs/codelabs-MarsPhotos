@@ -38,6 +38,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Enable ViewBinding (there is no need to edit XML files)
     buildFeatures {
         dataBinding true
     }
@@ -80,4 +82,7 @@ dependencies {
 
     // Retrofit with Moshi Converter
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // Coil
+    implementation "io.coil-kt:coil:1.4.0"
 }
