@@ -48,6 +48,9 @@ class OverviewFragment : Fragment() {
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
 
+        // initialize the RecyclerView adapter in binding.photosGrid to a new PhotoGridAdapter object.
+        binding.photosGrid.adapter = PhotoGridAdapter()
+
         return binding.root
     }
 }
