@@ -1,11 +1,13 @@
 package com.example.android.marsphotos
 
+import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.android.marsphotos.network.MarsPhoto
+import com.example.android.marsphotos.overview.MarsApiStatus
 import com.example.android.marsphotos.overview.PhotoGridAdapter
 
 @BindingAdapter("imageUrl")
@@ -30,5 +32,35 @@ fun bindRecyclerView(
 
     // This tells the RecyclerView when a new list is available.
     adapter.submitList(data)
+
+}
+
+
+@BindingAdapter("marsApiStatus")
+fun bindStatus(
+    statusImageView: ImageView,
+    status: MarsApiStatus?
+) {
+
+    when (status) {
+
+        // LOADING
+        MarsApiStatus.LOADING -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.loading_animation)
+        }
+
+        // ERROR
+        MarsApiStatus.ERROR -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.ic_connection_error)
+        }
+
+        // DONE
+        MarsApiStatus.DONE -> {
+            statusImageView.visibility = View.GONE
+        }
+    }
+
 
 }
