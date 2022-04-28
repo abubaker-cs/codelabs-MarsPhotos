@@ -8,7 +8,7 @@ import com.squareup.moshi.Json
  */
 data class MarsPhoto(
 
-    // ID
+    // ID.
     val id: String,
 
     // Image URL
