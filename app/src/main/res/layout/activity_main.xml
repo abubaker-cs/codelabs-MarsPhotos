@@ -16,6 +16,7 @@
   ~ limitations under the License.
   -->
 
+<!-- overview fragment (fragment_overview.xml) will be instantiated when the app is launched -->
 <androidx.fragment.app.FragmentContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

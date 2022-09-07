@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // 3. the only task for this activity is to load the activity's layout, activity_main.
         // Inflate XML file
         setContentView(R.layout.activity_main)
     }

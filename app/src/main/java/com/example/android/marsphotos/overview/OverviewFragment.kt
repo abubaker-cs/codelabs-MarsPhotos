@@ -39,9 +39,18 @@ class OverviewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        // XML: Inflates fragment_overview.xml using Data Binding
         val binding = FragmentOverviewBinding.inflate(inflater)
 
-        // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
+        //
+
+        /*
+        * > Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
+        *
+        * Because the lifecycle owner is assigned, any LiveData used in Data Binding will
+        * automatically be observed for any changes, and the UI will be updated accordingly.
+        * */
         binding.lifecycleOwner = this
 
         // Giving the binding access to the OverviewViewModel

@@ -35,14 +35,23 @@ class OverviewViewModel : ViewModel() {
      * Call getMarsPhotos() on init so we can display status immediately.
      */
     init {
+
+        // updates the placeholder response.
         getMarsPhotos()
+
     }
 
     /**
-     * Gets Mars photos information from the Mars API Retrofit service and updates the
+     * TODO: Gets Mars photos information from the Mars API Retrofit service and updates the
      * [MarsPhoto] [List] [LiveData].
      */
     private fun getMarsPhotos() {
+
+        // Updating the value of _status property, updates the placeholder text displayed on the screen.
         _status.value = "Set the Mars API status response here!"
+
     }
 }
+
+// TODO: The goal for this codelab is to update the status LiveData within the ViewModel using
+//       real data you get from the internet.
