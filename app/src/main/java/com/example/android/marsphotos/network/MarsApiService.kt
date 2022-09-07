@@ -13,10 +13,11 @@ private const val BASE_URL = "https://android-kotlin-fun-mars-server.appspot.com
 //
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
+    .build()
 
 // To build and create a Retrofit object.
 private val retrofit = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create())
+    .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
     .build()
 
