@@ -42,13 +42,20 @@ android {
         dataBinding true
     }
 
+    /*
+    * Many third party libraries including Retrofit2 use Java 8 language features.
+    *
+    *  > The Android Gradle plugin provides built-in support for using certain Java 8 language features.
+    */
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -62,6 +69,12 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.6.1'
 
+    // Retrofit = Core
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+
+    // Retrofit = Scalar Converter
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+
     // Moshi
     implementation 'com.squareup.moshi:moshi-kotlin:1.14.0'
 
@@ -70,5 +83,5 @@ dependencies {
 
     // Coil
     implementation 'io.coil-kt:coil:2.2.0'
-    
+
 }

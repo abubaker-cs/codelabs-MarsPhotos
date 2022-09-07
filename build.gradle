@@ -23,7 +23,11 @@ buildscript {
         kotlin_version = "1.7.10"
     }
     repositories {
+
+        // The Google libraries such as ViewModel and LiveData from the Jetpack library are hosted in the Google repository
         google()
+
+        // The majority of community libraries like Retrofit are hosted on Google and MavenCentral repositories.
         mavenCentral()
     }
     dependencies {
@@ -36,7 +40,11 @@ buildscript {
 
 allprojects {
     repositories {
+
+        // The Google libraries such as ViewModel and LiveData from the Jetpack library are hosted in the Google repository
         google()
+
+        // The majority of community libraries like Retrofit are hosted on Google and MavenCentral repositories.
         mavenCentral()
     }
 }
