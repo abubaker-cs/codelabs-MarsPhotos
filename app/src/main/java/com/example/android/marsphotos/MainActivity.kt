@@ -24,8 +24,12 @@ import androidx.appcompat.app.AppCompatActivity
  * overviewFragment.
  */
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Inflate XML file
         setContentView(R.layout.activity_main)
     }
+
 }
