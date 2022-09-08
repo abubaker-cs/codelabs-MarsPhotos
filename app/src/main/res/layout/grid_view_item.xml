@@ -24,10 +24,20 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.example.android.marsphotos.overview.OverviewViewModel"
+            name="photo"
+            type="com.example.android.marsphotos.network.MarsPhoto"
             />
     </data>
+
+    <!--    <data>-->
+
+    <!--        <variable-->
+    <!--            name="viewModel"-->
+    <!--            type="com.example.android.marsphotos.overview.OverviewViewModel"-->
+    <!--            />-->
+    <!--    </data>-->
+
+    <!--    app:imageUrl="@{viewModel.photos.imgSrcUrl}"-->
 
     <ImageView
         android:id="@+id/mars_image"
@@ -36,7 +46,7 @@
         android:adjustViewBounds="true"
         android:padding="2dp"
         android:scaleType="fitXY"
-        app:imageUrl="@{viewModel.photos.imgSrcUrl}"
+        app:imageUrl="@{photo.imgSrcUrl}"
         tools:src="@tools:sample/backgrounds/scenic"
         />
 

@@ -38,10 +38,10 @@ class OverviewViewModel : ViewModel() {
     /*
     * For Images
     * */
-    private val _photos = MutableLiveData<MarsPhoto>()
+    private val _photos = MutableLiveData<List<MarsPhoto>>()
 
     // Public backing field called photos of the type, LiveData<MarsPhoto>
-    val photos: LiveData<MarsPhoto> = _photos
+    val photos: LiveData<List<MarsPhoto>> = _photos
 
     /**
      * Call getMarsPhotos() on init so we can display status immediately.
@@ -65,8 +65,11 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
 
             try {
-                _photos.value = MarsApi.retrofitService.getPhotos()[0]
-                _status.value = "First Mars image URL: ${_photos.value!!.imgSrcUrl}"
+                _photos.value = MarsApi.retrofitService.getPhotos()
+                _status.value = "Success: Mars photos retrieved"
+
+                // _photos.value = MarsApi.retrofitService.getPhotos()[0]
+                // _status.value = "First Mars image URL: ${_photos.value!!.imgSrcUrl}"
 
                 // val listResult = MarsApi.retrofitService.getPhotos()
                 // _status.value = "Success: ${listResult.size} Mars photos retrieved"
